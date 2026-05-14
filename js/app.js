@@ -196,8 +196,8 @@
     const allChecked = leads.length > 0 && leads.every(l => state.selectedLeads.has(l.id));
     wrap.innerHTML = `<table class="leads-table">
       <thead><tr>
-        <th class="th-check"><input type="checkbox" title="Select all" ${allChecked ? 'checked' : ''}
-          onchange="App.toggleAllLeads(this.checked)"></th>
+        <th class="th-check"><input type="checkbox" id="select-all-leads" title="Select all"
+          ${allChecked ? 'checked' : ''} onchange="App.toggleAllLeads(this.checked)"></th>
         <th>Company</th><th>Contact</th><th>Email</th>
         <th>Category</th><th>Priority</th><th>Status</th><th>Actions</th>
       </tr></thead>
