@@ -1,0 +1,20 @@
+# ── OS / editor junk ──
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ── Secrets that must NEVER be committed ──
+# (All real credentials live in localStorage only — not in any file)
+.env
+.env.*
+secrets.json
+credentials.json
+
+# ── Node / build artifacts (if ever added) ──
+node_modules/
+dist/
+.cache/

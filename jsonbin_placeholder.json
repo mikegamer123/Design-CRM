@@ -1,0 +1,240 @@
+{
+  "leads": [
+    {
+      "id": "lx1a2b3c4d",
+      "company": "Dexera",
+      "contact": "Daniel Pedley",
+      "position": "Creative Director",
+      "email": "hello@dexera.se",
+      "phone": "",
+      "website": "https://dexera.se/",
+      "linkedin": "https://www.linkedin.com/in/danielatdexera/?originalSubdomain=se",
+      "country": "Sweden",
+      "category": "Creative Agency",
+      "client_type": "Agency",
+      "priority": "Warm",
+      "pitch_angle": "",
+      "design_notes": "",
+      "past_projects": "1",
+      "satisfaction": "⭐⭐⭐⭐⭐",
+      "last_contact": "1 MONTH",
+      "source": "Nikola Nimcevic",
+      "notes": "",
+      "status": "not_contacted",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        }
+      ]
+    },
+    {
+      "id": "lx2b3c4d5e",
+      "company": "Formulate Creative",
+      "contact": "Theo Adamson",
+      "position": "Managing Director",
+      "email": "theo@formulatecreative.com",
+      "phone": "",
+      "website": "https://www.formulatecreative.com/",
+      "linkedin": "https://www.linkedin.com/company/formulatecreative/",
+      "country": "UAE",
+      "category": "Creative Agency",
+      "client_type": "Agency",
+      "priority": "Warm",
+      "pitch_angle": "",
+      "design_notes": "",
+      "past_projects": "3",
+      "satisfaction": "⭐⭐⭐⭐⭐",
+      "last_contact": "24 MONTHS",
+      "source": "Nikola Nimcevic",
+      "notes": "",
+      "status": "contacted",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        }
+      ]
+    },
+    {
+      "id": "lx3c4d5e6f",
+      "company": "EntireFlight",
+      "contact": "Brett Beachner",
+      "position": "CEO, Owner",
+      "email": "brettbeachner@gmail.com",
+      "phone": "",
+      "website": "https://www.entireflight.com/",
+      "linkedin": "https://www.linkedin.com/in/brettbeachner/",
+      "country": "USA",
+      "category": "Product and Sales",
+      "client_type": "Business Owner",
+      "priority": "Hot",
+      "pitch_angle": "",
+      "design_notes": "",
+      "past_projects": "10+",
+      "satisfaction": "⭐⭐⭐⭐⭐",
+      "last_contact": "4 MONTHS",
+      "source": "Nikola Nimcevic",
+      "notes": "",
+      "status": "replied",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        },
+        {
+          "date": "2026-05-14T10:00:00.000Z",
+          "action": "email_sent",
+          "details": "Email sent: \"Elevate EntireFlight's Brand with Professional Design\""
+        },
+        {
+          "date": "2026-05-14T14:30:00.000Z",
+          "action": "reply_received",
+          "details": "Reply detected in email thread"
+        }
+      ]
+    },
+    {
+      "id": "lx4d5e6f7g",
+      "company": "Swooped",
+      "contact": "",
+      "position": "",
+      "email": "support@swooped.co",
+      "phone": "",
+      "website": "https://swooped.co",
+      "linkedin": "",
+      "country": "",
+      "category": "AI job search / resume SaaS",
+      "client_type": "",
+      "priority": "High",
+      "pitch_angle": "Small external creative team for ongoing product marketing, UX and brand execution",
+      "design_notes": "Design: Landing visuals, ad creatives, lifecycle design; UX: Signup flow and conversion UX; Marketing: Acquisition assets and content system; Branding: Sharper brand consistency",
+      "past_projects": "",
+      "satisfaction": "",
+      "last_contact": "",
+      "source": "https://swooped.co",
+      "notes": "Self-serve product site and product-led motion",
+      "status": "not_contacted",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        }
+      ]
+    },
+    {
+      "id": "lx5e6f7g8h",
+      "company": "Softr",
+      "contact": "",
+      "position": "",
+      "email": "support@softr.io",
+      "phone": "",
+      "website": "https://www.softr.io",
+      "linkedin": "",
+      "country": "",
+      "category": "No-code apps / portals",
+      "client_type": "",
+      "priority": "High",
+      "pitch_angle": "One subscription team for launches, tutorials, landing pages and product UX assets",
+      "design_notes": "Design: Web and product visuals; UX: Onboarding and template UX; Marketing: Case-study and launch assets; Branding: More consistent brand system",
+      "past_projects": "",
+      "satisfaction": "",
+      "last_contact": "",
+      "source": "https://www.softr.io",
+      "notes": "Templates, support center, use-case driven content",
+      "status": "not_contacted",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        }
+      ]
+    },
+    {
+      "id": "lx6f7g8h9i",
+      "company": "My HR Extension",
+      "contact": "Casey Webster",
+      "position": "Founder & CEO",
+      "email": "info@myhrextension.com",
+      "phone": "",
+      "website": "https://www.myhrextension.com/",
+      "linkedin": "https://www.linkedin.com/in/casey-webster-b4614a3/",
+      "country": "USA",
+      "category": "HR Services",
+      "client_type": "Agency",
+      "priority": "Warm",
+      "pitch_angle": "",
+      "design_notes": "",
+      "past_projects": "1",
+      "satisfaction": "⭐⭐⭐⭐⭐",
+      "last_contact": "1 MONTH",
+      "source": "Nikola Nimcevic",
+      "notes": "",
+      "status": "proposal_sent",
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z",
+      "history": [
+        {
+          "date": "2026-05-14T09:00:00.000Z",
+          "action": "lead_created",
+          "details": "Imported from CSV"
+        },
+        {
+          "date": "2026-05-14T11:00:00.000Z",
+          "action": "email_sent",
+          "details": "Email sent: \"Your Design Proposal — My HR Extension\""
+        },
+        {
+          "date": "2026-05-14T12:00:00.000Z",
+          "action": "status_change",
+          "details": "Status: Contacted → Proposal Sent"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl_initial_001",
+      "name": "Initial Outreach",
+      "stage": "initial_outreach",
+      "subject": "Elevate {{company}}'s Brand with Professional Design",
+      "body": "<p>Hi {{name}},</p>\n<p>I hope this finds you well! I came across {{company}} and was genuinely impressed by what you're building.</p>\n<p>We run a design &amp; branding subscription that helps growing companies stand out — unlimited design requests, fast turnarounds, and a dedicated designer who understands your brand.</p>\n<p>Would you be open to a quick 15-minute chat to explore if there's a fit?</p>\n<p>Best,<br>{{sender}}</p>"
+    },
+    {
+      "id": "tpl_followup_002",
+      "name": "Follow-Up",
+      "stage": "follow_up",
+      "subject": "Following up — Design for {{company}}",
+      "body": "<p>Hi {{name}},</p>\n<p>Just circling back on my last message — I know inboxes get busy!</p>\n<p>We've helped companies similar to {{company}} transform their visual presence without the overhead of an in-house team. I'd love to share a few relevant examples.</p>\n<p>Even a quick 10 minutes could be worthwhile. What does your week look like?</p>\n<p>Best,<br>{{sender}}</p>"
+    },
+    {
+      "id": "tpl_proposal_003",
+      "name": "Proposal Ready",
+      "stage": "proposal",
+      "subject": "Your Design Proposal — {{company}}",
+      "body": "<p>Hi {{name}},</p>\n<p>Thank you for your interest! Here's what our subscription includes for {{company}}:</p>\n<ul>\n<li>Unlimited design requests</li>\n<li>48-hour turnaround on most tasks</li>\n<li>Dedicated designer who knows your brand</li>\n<li>Unlimited revisions</li>\n</ul>\n<p>I'd love to walk you through the details on a quick call. When works best for you?</p>\n<p>Best,<br>{{sender}}</p>"
+    },
+    {
+      "id": "tpl_closing_004",
+      "name": "Closing",
+      "stage": "closing",
+      "subject": "Ready to get started, {{name}}?",
+      "body": "<p>Hi {{name}},</p>\n<p>One final follow-up — we have a limited offer this month I'd hate for {{company}} to miss.</p>\n<p>If the timing isn't right, no worries at all — I'll check back later. But if you'd like to move forward or have any questions, just reply here.</p>\n<p>Looking forward to hearing from you,<br>{{sender}}</p>"
+    }
+  ]
+}

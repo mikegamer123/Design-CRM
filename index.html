@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-mark">D</div>
+      <span class="logo-text">Design CRM</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" data-view="dashboard" class="active"><span class="nav-icon">⬛</span>Dashboard</a></li>
+      <li><a href="#" data-view="leads"><span class="nav-icon">👥</span>Leads</a></li>
+      <li><a href="#" data-view="templates"><span class="nav-icon">✉</span>Templates</a></li>
+      <li><a href="#" data-view="settings"><span class="nav-icon">⚙</span>Settings</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <div id="gmail-status" class="gmail-status disconnected">
+        <span class="gmail-dot"></span>
+        <span id="gmail-status-text">Gmail not connected</span>
+      </div>
+      <button id="btn-gmail-auth" class="btn-gmail-connect">Connect Gmail</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ===== DASHBOARD ===== -->
+    <section id="view-dashboard" class="view active">
+      <header class="view-header">
+        <div>
+          <h2>Dashboard</h2>
+          <p class="view-subtitle">Overview of your pipeline</p>
+        </div>
+        <div class="header-actions">
+          <button id="btn-sync-sheet" class="btn-secondary">↓ Sync from Sheet</button>
+          <button id="btn-push-sheet" class="btn-secondary">↑ Push to Sheet</button>
+          <button id="btn-check-replies" class="btn-secondary"><span>↻</span> Check Replies</button>
+        </div>
+      </header>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num" id="stat-total">0</span>
+          <span class="stat-lbl">Total Leads</span>
+        </div>
+        <div class="stat-card c-gray">
+          <span class="stat-num" id="stat-not-contacted">0</span>
+          <span class="stat-lbl">Not Contacted</span>
+        </div>
+        <div class="stat-card c-blue">
+          <span class="stat-num" id="stat-contacted">0</span>
+          <span class="stat-lbl">Contacted</span>
+        </div>
+        <div class="stat-card c-amber">
+          <span class="stat-num" id="stat-replied">0</span>
+          <span class="stat-lbl">Replied</span>
+        </div>
+        <div class="stat-card c-purple">
+          <span class="stat-num" id="stat-proposal">0</span>
+          <span class="stat-lbl">Proposal Sent</span>
+        </div>
+        <div class="stat-card c-green">
+          <span class="stat-num" id="stat-won">0</span>
+          <span class="stat-lbl">Closed Won</span>
+        </div>
+        <div class="stat-card c-red">
+          <span class="stat-num" id="stat-lost">0</span>
+          <span class="stat-lbl">Closed Lost</span>
+        </div>
+      </div>
+
+      <!-- Kanban Pipeline -->
+      <div class="section-title">Pipeline</div>
+      <div id="kanban-board" class="kanban-board">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="section-title" style="margin-top:28px">Recent Activity</div>
+      <div class="card">
+        <div id="recent-activity" class="activity-list">
+          <p class="empty-state">No activity yet</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEADS ===== -->
+    <section id="view-leads" class="view">
+      <header class="view-header">
+        <div>
+          <h2>Leads</h2>
+          <p class="view-subtitle" id="leads-count-label">—</p>
+        </div>
+        <div class="header-actions">
+          <label class="btn-secondary btn-import" title="Import from CSV/Excel export">
+            ↑ Import CSV
+            <input type="file" id="import-file" accept=".csv" style="display:none">
+          </label>
+          <button id="btn-add-lead" class="btn-primary">+ Add Lead</button>
+        </div>
+      </header>
+
+      <div class="filters-bar">
+        <input type="text" id="lead-search" placeholder="Search by name, contact, email…" class="search-input">
+        <select id="status-filter" class="filter-select">
+          <option value="">All Statuses</option>
+          <option value="not_contacted">Not Contacted</option>
+          <option value="contacted">Contacted</option>
+          <option value="replied">Replied</option>
+          <option value="proposal_sent">Proposal Sent</option>
+          <option value="negotiating">Negotiating</option>
+          <option value="closed_won">Closed Won</option>
+          <option value="closed_lost">Closed Lost</option>
+        </select>
+      </div>
+
+      <!-- Bulk-action bar (shown when ≥1 lead is checked) -->
+      <div id="bulk-bar" class="bulk-bar hidden">
+        <div class="bulk-bar-info">
+          <span id="bulk-count-text">0 selected</span>
+          <span class="bulk-bar-hint">leads selected</span>
+        </div>
+        <div class="bulk-bar-actions">
+          <button class="btn-primary btn-sm" onclick="App.openBulkEmail()">📧 Send Email to All Selected</button>
+          <button class="btn-secondary btn-sm" onclick="App.clearSelection()">✕ Clear Selection</button>
+        </div>
+      </div>
+
+      <div id="leads-list" class="leads-table-wrap">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ===== LEAD DETAIL ===== -->
+    <section id="view-lead-detail" class="view">
+      <header class="view-header">
+        <button id="btn-back-leads" class="btn-back">← Back to Leads</button>
+        <div class="header-actions">
+          <button id="btn-edit-lead" class="btn-secondary">Edit</button>
+          <button id="btn-delete-lead" class="btn-danger">Delete</button>
+        </div>
+      </header>
+      <div id="lead-detail-content"></div>
+    </section>
+
+    <!-- ===== TEMPLATES ===== -->
+    <section id="view-templates" class="view">
+      <header class="view-header">
+        <div>
+          <h2>Email Templates</h2>
+          <p class="view-subtitle">Reusable messages with smart placeholders</p>
+        </div>
+        <button id="btn-add-template" class="btn-primary">+ Add Template</button>
+      </header>
+      <div id="templates-list" class="templates-grid"></div>
+    </section>
+
+    <!-- ===== SETTINGS ===== -->
+    <section id="view-settings" class="view">
+      <header class="view-header">
+        <h2>Settings</h2>
+      </header>
+
+      <div class="settings-grid">
+        <div class="card">
+          <div class="card-section-title">Storage — JSONBin.io</div>
+          <p class="settings-hint">Free JSON cloud storage. Create a free bin at <strong>jsonbin.io</strong>, then paste your credentials below. Data is also saved locally as a backup.</p>
+          <div class="form-group">
+            <label>API Key (X-Master-Key)</label>
+            <input type="password" id="setting-jsonbin-key" placeholder="$2b$10$...">
+          </div>
+          <div class="form-group">
+            <label>Bin ID</label>
+            <input type="text" id="setting-jsonbin-bin" placeholder="64abc123...">
+          </div>
+          <div class="form-group">
+            <button id="btn-test-storage" class="btn-secondary">Test Connection</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-section-title">Gmail + Google Sheets API (OAuth)</div>
+          <p class="settings-hint">Create a project at <strong>console.cloud.google.com</strong>, enable <strong>Gmail API</strong> and <strong>Google Sheets API</strong>, create an OAuth 2.0 Web Client ID, and add your domain as an authorized origin.</p>
+          <div class="form-group">
+            <label>Google OAuth Client ID</label>
+            <input type="text" id="setting-google-client-id" placeholder="123456789-abc.apps.googleusercontent.com">
+          </div>
+          <div class="form-group">
+            <label>Google Sheet ID (master leads sheet)</label>
+            <input type="text" id="setting-sheet-id" placeholder="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms">
+            <small>The long ID from your Google Sheet URL: docs.google.com/spreadsheets/d/<strong>SHEET_ID</strong>/edit</small>
+          </div>
+          <div class="form-group">
+            <button id="btn-create-sheet-template" class="btn-secondary">📋 How to set up the Sheet</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-section-title">Sender Identity</div>
+          <p class="settings-hint">This name and email appear in outgoing messages.</p>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="setting-sender-name" placeholder="Jane Smith">
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" id="setting-sender-email" placeholder="jane@youragency.com">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-section-title">Data</div>
+          <div class="form-group danger-zone">
+            <button id="btn-export-json" class="btn-secondary">Export All Data (JSON)</button>
+            <button id="btn-clear-data" class="btn-danger">Clear All Local Data</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions sticky-save">
+        <button id="btn-save-settings" class="btn-primary btn-lg">Save Settings</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODAL ===== -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal-box" class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title">Modal</h3>
+        <button class="modal-close" id="btn-modal-close">×</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOASTS ===== -->
+  <div id="toast-container"></div>
+
+  <!-- Google Identity Services (loads async) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <script src="js/storage.js"></script>
+  <script src="js/gmail.js"></script>
+  <script src="js/sheets.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
